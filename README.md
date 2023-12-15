@@ -30,7 +30,7 @@ default gateway to believing they are the user by using MAC and IP address.
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://imgur.com/a/E8bzOuM" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/E8bzOuM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Select the disk:  <br/>
