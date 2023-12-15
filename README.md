@@ -24,13 +24,13 @@ default gateway to believing they are the user by using MAC and IP address.
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10/ Kali Linux</b> (21H2)
+- <b>Windows 10/ Kali Linux</b> 
 
 <h2>Project GUI:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://imgur.com/rIGjxlL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Homepage: <br/>
+<img src="https://imgur.com/rIGjxlL.png" height="80%" width="80%" alt="Home"/>
 <br />
 <br />
 Select the disk:  <br/>
