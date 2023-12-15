@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block button %}
+<!--The heading and redirecting button to traffic page-->
+<h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>ANALYZING PACKET TRAFFIC</strong></h2>
+
+<div style="margin-left:350px; margin-right:350px">
+<a href='http://127.0.0.1:5000/menu'><img src="{{url_for('static', filename= 'menu.jpeg')}}" class="rounded float-left mx-auto d-block" height="50px" width="50px"></a>
+<a href='http://127.0.0.1:5000/traffic'><img src="{{url_for('static', filename= 'packets.jpeg')}}" class="rounded float-right mx-auto d-block" height="50px" width="50px"></a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<hr>
+<!--Status of Captured Packets-->
+<div class="alert alert-success" role="alert" id="status">
+    <h1>You are PROTECTED</h1>
+</div>
+<hr>
+ 
+<script>
+    // Continuosly update packets every 3 seconds
+    var packetInterval = setInterval(getPackets, 3000);
+
+    // Function to get the stored packets from backend to frontend
+    function getPackets() {
+        const url = 'http://localhost:5000/get_packets';
+        fetch(url)
+        .then(response => response.json()) 
+        .then(json => {
+            console.log(json["under_attack"]);
+            var packet_data = json;
+            // If under attack, alert the user
+            if (json["under_attack"] == true){
+            document.getElementById("status").innerHTML = "NOT SAFE!!!";
+            alert("YOU ARE UNDER MAN-IN-THE-MIDDLE ATTACK!!!!\n" +
+            " Real MAC Address: " + json["real_mac"] + 
+            "\n Fake MAC Address: " + json["fake_mac"]
+            + "\n Please disconnect the network for safety!");
+        }
+        })
+        // Stop continuos calls when any error occurs
+        .catch((error) => {
+            console.log(error)
+            clearInterval(packetInterval);
+            })
+        }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block button %}
+<!--The heading and redirecting button to traffic page-->
+<h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>MENU OF VARIOUS FOOD-CHAINS</strong></h2>
+
+<div style="margin-left:350px; margin-right:350px">
+<a href='http://127.0.0.1:5000/'><img src="{{url_for('static', filename= 'home.jpeg')}}" class="rounded float-left mx-auto d-block" height="50px" width="50px"></a>
+<a href='http://127.0.0.1:5000/traffic'><img src="{{url_for('static', filename= 'packets.jpeg')}}" class="rounded float-right mx-auto d-block" height="50px" width="50px"></a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<!-- Dropdown with values as image source -->
+<select id="menubar" class="custom-select custom-select-lg mb-3">
+    <option selected value="{{url_for('static', filename= 'menu_default.jpeg')}}">Select the restaurant</option>
+    <option value="{{url_for('static', filename= 'KFC.PNG')}}">KFC</option>
+    <option value="{{url_for('static', filename= 'Starbucks.png')}}">Starbucks</option>
+    <option value="{{url_for('static', filename= 'Costa.png')}}">Costa</option>
+    <option value="{{url_for('static', filename= 'CaffeNero.png')}}">Caffe Nero</option>
+    <option value="{{url_for('static', filename= 'Pret.png')}}">Pret</option>
+    <option value="{{url_for('static', filename= 'McDonalds2.png')}}">McDonalds-Burgers</option>
+    <option value="{{url_for('static', filename= 'McDonalds1.png')}}">McDonalds-Others</option>
+</select>
+
+<!-- Menu Image Block-->
+<img id="menuimage" src="{{url_for('static', filename= 'menu_default.jpeg')}}" height="450px" width="350px"></img>
+
+<script>
+    // Script to change the image source dynamically when select box value changes 
+    $('#menubar').on('change', function () {
+        img_src = $("#menubar option:selected").val();
+        $("#menuimage").attr("src", img_src);
+    });
+
+</script>
+
+{% endblock %}

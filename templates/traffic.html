@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block button %}
+<!--The heading and redirecting button to menu page-->
+<h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>PACKET TRAFFIC DATA</strong></h2>
+
+<div style="margin-left:350px; margin-right:350px">
+<a href='http://127.0.0.1:5000/'><img src="{{url_for('static', filename= 'home.jpeg')}}" class="rounded float-left mx-auto d-block" height="50px" width="50px"></a>
+<a href='http://127.0.0.1:5000/menu'><img src="{{url_for('static', filename= 'menu.jpeg')}}" class="rounded float-right mx-auto d-block" height="50px" width="50px"></a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<!-- To display the captured packets -->
+<ul class="list-group" id="packetData" style="text-align: left; margin-left: 15px">
+
+</ul>
+
+<script>
+    // Continuosly update packets every 3 seconds
+    var packetInterval = setInterval(getPackets, 3000);
+    
+    // Function to get the stored packets from backend to frontend
+    function getPackets() {
+        const url = 'http://localhost:5000/get_packets';
+        fetch(url)
+        .then(response => response.json()) 
+        .then(json => {
+            console.log(json["packets"]);
+            console.log(json["under_attack"]);
+            var packet_data = json;
+            var ul = document.getElementById("packetData");
+            // If under attack, alert the user
+            if (json["under_attack"] == true){
+                alert("YOU ARE UNDER MAN-IN-THE-MIDDLE ATTACK!!!!\n" +
+                 " Real MAC Address: " + json["real_mac"] + 
+                "\n Fake MAC Address: " + json["fake_mac"]
+                + "\n Please disconnect the network for safety!");
+            }
+            // Display the packet data
+            for (let i = 0; i < json["packets"].length; i++) {
+                var li = document.createElement("li");
+                li.innerHTML = json["packets"][i];
+                ul.appendChild(li);
+            }
+        })
+        // Stop continuos calls when any error occurs
+        .catch((error) => {
+            console.log(error)
+            clearInterval(packetInterval);
+            })
+        }
+
+</script>
+
+{% endblock %}
