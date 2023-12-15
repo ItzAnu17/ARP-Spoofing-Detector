@@ -1,3 +1,4 @@
+
 <h1>ARP Spoofing Detector</h1>
 
 
@@ -14,7 +15,12 @@ default gateway to believing they are the user by using MAC and IP address.
 <h2>Languages and Libraries</h2>
 
 - <b>Python</b> 
-- <b></b>
+- <b>certifi</b>
+- <b>Flask</b>
+- <b>itsdangerous</b>
+- <b>PyQt5</b>
+- <b>scapy</b>
+
 
 <h2>Environments Used </h2>
 
