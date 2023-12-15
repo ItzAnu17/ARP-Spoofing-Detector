@@ -30,11 +30,11 @@ default gateway to believing they are the user by using MAC and IP address.
 
 <p align="center">
 Homepage: <br/>
-<img src="https://imgur.com/rIGjxlL.png" height="80%" width="80%" alt="Home"/>
+<img src="https://imgur.com/rIGjxlL.png" height="70%" width="70%" alt="Home"/>
 <br />
 <br />
 Live Traffic Analysis:  <br/>
-<img src="https://imgur.com/x4EAmdx.png" height="80%" width="80%" alt="Traffic Analysis"/>
+<img src="https://imgur.com/x4EAmdx.png" height="70%" width="70%" alt="Traffic Analysis"/>
 <br />
 <br />
 Enter the number of passes: <br/>
