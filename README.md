@@ -33,8 +33,8 @@ Homepage: <br/>
 <img src="https://imgur.com/rIGjxlL.png" height="80%" width="80%" alt="Home"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Live Traffic Analysis:  <br/>
+<img src="https://imgur.com/x4EAmdx.png" height="80%" width="80%" alt="Traffic Analysis"/>
 <br />
 <br />
 Enter the number of passes: <br/>
