@@ -37,8 +37,8 @@ Live Traffic Analysis:  <br/>
 <img src="https://imgur.com/x4EAmdx.png" height="70%" width="70%" alt="Traffic Analysis"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Detecting ARP Spoof attack: <br/>
+<img src="https://imgur.com/6V1CEUs.png" height="70%" width="70%" alt="Attack"/>
 <br />
 <br />
 Confirm your selection:  <br/>
