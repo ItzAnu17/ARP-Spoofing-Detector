@@ -38,7 +38,7 @@ Live Traffic Analysis:  <br/>
 <br />
 <br />
 Detecting ARP Spoof attack: <br/>
-<img src="https://imgur.com/oEYIIq5.png" height="70%" width="70%" alt="Attack"/>
+<img src="https://imgur.com/oEYIIq5.png" height="40%" width="40%" alt="Attack"/>
 <br />
 <br />
 Confirm your selection:  <br/>
