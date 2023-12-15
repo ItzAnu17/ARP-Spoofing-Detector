@@ -3,23 +3,34 @@
 
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+Public networks are getting dangerous to use, as malicious users can intercept the network when
+the user is sending and receiving packets from a default gateway. There are many consequences
+when the attacker can spoof packets, as it can hold sensitive data . This cyber attack is called Man
+in the Middle attack, to be exact, is called ARP spoofing attack, where the attacker tricks the
+default gateway to believing they are the user by using MAC and IP address.
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Languages and Libraries used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Python</b> 
+- <b>certifi</b>
+- <b>Flask</b>
+- <b>itsdangerous</b>
+- <b>PyQt5</b>
+- <b>scapy</b>
+
+
+
 
 <h2>Environments Used </h2>
 
 - <b>Windows 10/ Kali Linux</b> 
 
-<h2>Program walk-through:</h2>
+<h2>GUI of the application:</h2>
 
 <p align="center">
-Launch the utility: <br/>
+Homepage: <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -27,8 +38,8 @@ Select the disk:  <br/>
 <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Detecting ARP Spoofing attack: <br/>
+<img src="https://imgur.com/oEYIIq5.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
